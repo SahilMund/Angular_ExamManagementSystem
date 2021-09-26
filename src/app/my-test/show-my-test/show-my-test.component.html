@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="localData.length" class="card container mt-5 ">
+
+    <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-action d-flex" *ngFor="let item of localData">
+            <div class="course-content">
+                {{item}}
+            </div>
+
+            <div class="course-extra-stuff status ">
+                <p>50%</p>
+            </div>
+            <div class="course-extra-stuff time">
+                <p> 3hr</p>
+            </div>
+            <div class="course-extra-stuff marks">
+                <p>Total Marks:70</p>
+            </div>
+            <div class="course-extra-stuff noOfattempts">
+                <p>No Of Attempts : 2</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="!localData.length" class="card container mt-5 ">
+
+    <h4>OOPSY!! No Data Available </h4>
+</div>

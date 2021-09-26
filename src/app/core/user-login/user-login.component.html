@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h3 class="text-center bg-light">Registration Form</h3>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+
+                    <!-- <h2 class="text-center">Registration Form</h2> -->
+                    <form class="card-body form-horizontal" role="form" #form="ngForm" autocomplete="off" (submit)="submitForm(form)">
+                        <!-- <input type="hidden" name="id" >
+                               <div id="signupalert" style="display:none" class="alert alert-danger">
+                           
+                        </div> -->
+
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-3 control-label">Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="name" #name="ngModel" placeholder="Enter Your Name" [(ngModel)]="formData.name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 control-label">Email</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address" [(ngModel)]="formData.email">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Password</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="Password" placeholder="Enter Your Password" [(ngModel)]="formData.password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd" class="col-md-3 control-label">Re-Eneter Password</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="pwd" placeholder="Re-enter Your Password" [(ngModel)]="formData.repassword">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-offset-5 col-md-12">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-offset-5 col-md-12">
+                                <!-- {{formData | json}} -->
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>

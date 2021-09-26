@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="card container mt-5 ">
+    <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-action" *ngFor="let item of course">
+            <div class="course-content">
+                {{item}}
+            </div>
+
+            <button *ngIf="!isSubscirbed(item)" class="btn btn-outline-success  btn-subs" (click)="onSubscribe(item)">Subscribe</button>
+            <button *ngIf="isSubscirbed(item)" class="btn btn-outline-danger  btn-subs" (click)="onUnSubscribe(item)">UnSubscribe</button>
+        </div>
+
+
+    </div>
+</div>
